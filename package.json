@@ -1,0 +1,32 @@
+{
+  "name": "stuffit-react",
+  "version": "0.1.0",
+  "description": "React connectors for stuffit.",
+  "main": "lib/es6/index.js",
+  "scripts": {
+    "lint": "tslint \"src/**/*.ts\" \"test/**/*.ts\"",
+    "build": "rimraf lib/ && tsc && copy-cli \"src/**/*.d.ts\" \"lib/es6/\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/woutervh-/stuffit-react.git"
+  },
+  "author": "Wouter van Heeswijk",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/woutervh-/stuffit-react/issues"
+  },
+  "homepage": "https://github.com/woutervh-/stuffit-react#readme",
+  "devDependencies": {
+    "@types/react": "^16.8.24",
+    "copy": "^0.3.2",
+    "rimraf": "^2.6.3",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "react": "^16.8.6",
+    "stuffit": "^0.1.1"
+  }
+}
