@@ -3,6 +3,7 @@
   "version": "0.1.1",
   "description": "React connectors for stuffit.",
   "main": "lib/es6/index.js",
+  "module": "lib/es6/index.js",
   "scripts": {
     "lint": "tslint \"src/**/*.ts\" \"test/**/*.ts\"",
     "build": "rimraf lib/ && tsc && copy-cli \"src/**/*.d.ts\" \"lib/es6/\"",
