@@ -1,7 +1,11 @@
 import { Store, Subscription } from 'stuffit';
 
-// TODO: better folder name/filename/function name.
-
+/**
+ * Modifies the given component such that when it did mount (componentDidMount), it will start to listen to the given stores.
+ * When one of the given stores updates, the component will be called to forceUpdate.
+ * Subscriptions are cancelled when the component will unmount (componentWillUnmount).
+ * This function must be called from the constructor of the component.
+ */
 export const connect = <T extends Store<unknown>>(...stores: T[]) => <U extends React.Component>(component: U) => {
     let subscriptions: Subscription[] | undefined = undefined;
     const handleUpdate = () => component.forceUpdate();

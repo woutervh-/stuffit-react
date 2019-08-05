@@ -11,7 +11,7 @@ import { Connect } from './connect';
  *   counter: number;
  * }
  *
- * @ExplicitState({ counter: store })
+ * @ExplicitConnect({ counter: store })
  * class MyComponent extends React.PureComponent<{}, State> {
  *   render() {
  *     return <span>Number: {this.state.counter}</span>;
