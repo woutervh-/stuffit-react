@@ -1,6 +1,8 @@
 import { Store } from 'stuffit';
 import { Connect } from './connect';
 
+type InferredConnectedState<P extends { [Key: string]: Store<unknown> }> = { [Key in keyof P]: P[Key] extends Store<infer V> ? V : never };
+
 /**
  * Injects state into the component from the given stores.
  *
@@ -20,5 +22,5 @@ import { Connect } from './connect';
  * ```
  */
 export const ExplicitConnect = <T extends { [Key: string]: Store<unknown> }>(stores: T) => {
-    return Connect(() => stores);
+    return Connect(() => stores) as <U extends React.ComponentClass<{}, InferredConnectedState<T>>>(constructor: U) => void;
 };
