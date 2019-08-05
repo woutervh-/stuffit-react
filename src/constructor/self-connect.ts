@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { Store, Subscription } from 'stuffit';
 
 // TODO: better folder name/filename/function name.
