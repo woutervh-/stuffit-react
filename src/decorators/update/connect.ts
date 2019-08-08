@@ -34,5 +34,5 @@ export const Connect = <T extends Store<unknown>>(getStores: (this: React.Compon
             }
             subscriptionMap.delete(this);
         }
-    };
+    } as U;
 };
