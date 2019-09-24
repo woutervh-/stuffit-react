@@ -1,6 +1,6 @@
 {
   "name": "stuffit-react",
-  "version": "0.1.8",
+  "version": "0.2.0",
   "description": "React connectors for stuffit.",
   "main": "lib/es6/index.js",
   "module": "lib/es6/index.js",
