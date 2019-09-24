@@ -1,6 +1,6 @@
 import * as Stuffit from 'stuffit';
 
-export class PropsStore<T> extends Stuffit.Producers.PushStore<T> {
+export class PropsStore<T> extends Stuffit.PushStore<T> {
     public constructor(element: React.Component<T>) {
         super(element.props);
         const original = element.componentDidUpdate;

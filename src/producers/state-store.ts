@@ -1,6 +1,6 @@
 import * as Stuffit from 'stuffit';
 
-export class StateStore<T> extends Stuffit.Producers.PushStore<T> {
+export class StateStore<T> extends Stuffit.PushStore<T> {
     public constructor(element: React.Component<unknown, T>) {
         super(element.state);
         const original = element.componentDidUpdate;
