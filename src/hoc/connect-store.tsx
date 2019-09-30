@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Store, Subscription } from 'stuffit';
 
-export const connectStore = <T extends {}>(store: Store<T>) => <P extends T>(Component: React.ComponentType<P>) =>
+export const connectStore = <T extends {}>(store: Store<T>) => <P extends {}>(Component: React.ComponentType<P>) =>
     class extends React.PureComponent<Omit<P, keyof T>, T> {
         public state = store.state;
 

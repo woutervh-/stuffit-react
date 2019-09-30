@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Store, Subscription } from 'stuffit';
 
-export const connectToProps = <T, U extends {}>(store: Store<T>, mapToProps: (state: T) => U) => <P extends U>(Component: React.ComponentType<P>) =>
+export const connectToProps = <T, U extends {}>(store: Store<T>, mapToProps: (state: T) => U) => <P extends {}>(Component: React.ComponentType<P>) =>
     class extends React.PureComponent<Omit<P, keyof U>, U> {
         public state = mapToProps(store.state);
 
